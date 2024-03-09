@@ -1,11 +1,9 @@
 "use client"
-
+import { Inbox, Settings, User, DollarSign, LogOut, Lock, Bell, ChevronRightIcon }  from "lucide-react"
 import UserItem from "./UserItem"
 
 import {
     Command,
-    CommandDialog,
-    CommandEmpty,
     CommandGroup,
     CommandInput,
     CommandItem,
@@ -20,37 +18,48 @@ export default function Sidebar() {
             items: [
                 {
                     link: "/",
-                    text: "profile"
+                    icon: <User />,
+                    text: "Profile"
                 },
                 {
-                    link: "/",
+                    link: "/inbox",
+                    icon: <Inbox />,
                     text: "Inbox"
                 },
                 {
-                    link: "/",
+                    link: "/billing",
+                    icon: <DollarSign />,
                     text: "Billing"
                 },
+                {
+                    link: "/billing",
+                    icon: <Bell />,
+                    text: "Notifications"
+                }
             ]
         },
-
         {
             group: "Settings",
             items: [
                 {
-                    link: "/",
+                    link: "/general-settings",
+                    icon: <Settings />,
                     text: "General Settings"
                 },
                 {
-                    link: "/",
+                    link: "/privacy",
+                    icon: <Lock />,
                     text: "Privacy"
                 },
                 {
-                    link: "/",
+                    link: "/logs",
+                    icon: <LogOut />,
                     text: "Logs"
                 },
             ]
         }
     ];
+    
 
     return (
         <div className="flex flex-col gap-4 w-[300px] border-r min-h-screen p-4">
@@ -63,7 +72,13 @@ export default function Sidebar() {
                         {menuList.map((menu: any, key: number) => (
                             <CommandGroup key={key} heading={menu.group}>
                                 {menu.items && Array.isArray(menu.items) && menu.items.map((option: any, optionKey: number) => (
-                                    <CommandItem key={optionKey}>{option.text}</CommandItem>
+                                   <CommandItem key={optionKey} className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 hover:text-gray-800 cursor-pointer">
+                                   <span className="text-lg">{option.icon}</span> 
+                                   <span className="text-sm font-medium">{option.text}</span> 
+                                   {option.badge && <span className="bg-red-500 text-white text-xs px-1 rounded-full">{option.badge}</span>} 
+                                   {option.subMenu && <ChevronRightIcon className="w-4 h-4 text-gray-500" />} 
+                               </CommandItem>
+                               
                                 ))}
                             </CommandGroup>
                         ))}
