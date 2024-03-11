@@ -1,4 +1,4 @@
-"use client"; // Mark the parent component as a Client Component
+"use client"; 
 
 import React, { useState } from "react";
 import { Bell } from "lucide-react";
