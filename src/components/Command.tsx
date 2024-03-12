@@ -66,7 +66,3 @@ import { useState } from "react"
     )
   }
 
-// function useState<T>(arg0: boolean): [any, any] {
-//     throw new Error("Function not implemented.")
-// }
-  

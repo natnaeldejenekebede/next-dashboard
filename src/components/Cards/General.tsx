@@ -12,7 +12,6 @@ import {
   } from "@/components/ui/card"
   
 
-// MyResponsiveBump component
 const MyResponsiveBump = ({ data }: { data: any }) => (
     <ResponsiveBump
         data={data}
