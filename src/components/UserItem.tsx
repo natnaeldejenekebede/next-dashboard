@@ -6,7 +6,7 @@ export default function UserItem (){
       </div>
       <div className="grow">
         <p className="text-[16px] font-bold">Natnael Dejene</p>
-        <p className="text-[12px] text-neutral-500">natnaeldejene@gmail.com</p>
+        <p className="text-[12px] text-neutral-500">natnaeldejene19@gmail.com</p>
       </div>
     </div>
     )
