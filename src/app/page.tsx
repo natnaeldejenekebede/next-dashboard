@@ -1,7 +1,3 @@
-
-
-
-    // import General from "@/components/Cards/General"
     import General from "../components/Cards/General"
     import { Card } from "../components/ui/card"
     import Lines from "../components/Cards/Lines"
