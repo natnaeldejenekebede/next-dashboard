@@ -14,7 +14,7 @@ import {
 export default function Header() {
     const [notifications, setNotifications] = useState([
         {
-            text: "This is a notification",
+            text: "This is a notifications",
             date: "22-04-2024",
             read: false
         },
